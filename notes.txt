@@ -1,0 +1,62 @@
+-------------------------
+Analizando el diseño
+-------------------------
+Análisis de un proyecto que viene desde una herramienta llamada "Figma", usada para crear Wireframes.
+Los Wireframes tienen ayudan a graficar la arquitectura de la pagina web.
+Figma genera estilos en su vista de "Editor", pero son SOLO SUGERENCIA, NO ES LA IDEA USARLOS. Lo que si conviene usar son los estilos referidos a "estilos de fuente" y los COLORES. Ademas nos permite exportar las imagenes para guardarlas y usarlas.
+
+-------------------------
+Arquitectura inicial
+-------------------------
+La arquitectura web se puede definir como la forma en que las páginas de un sitio web están estructuradas y enlazadas entre sí (de manera lógica y coherente). Una arquitectura web ideal ayuda a los usuarios y a los motores de búsqueda a encontrar fácilmente lo que están buscando en un sitio web.
+
+Arquitectura del proyecto:
+    Header
+    4 secciones
+    Footer
+
+-------------------------
+Assests de nuestro proyecto
+-------------------------
+
+Los assets son todos los recursos estáticos que utilizaremos en nuestro proyecto, tales como:
+- Imágenes
+    - Logotipos/Isotipos (Si el logotipo y el nombre de la empresa/marca se encuentran en elementos separados, es preferible descargarlos agrupados)
+- Íconos
+
+PRO TIP: podemos descargar varios assets simultáneamente. Solo debemos seleccionar varios elementos, presionando CTRL + Clic sobre el elemento, y luego presionamos Export seleccionamos el formato, ¡y Listo! nuestros assets se descargaran en un archivo .zip
+
+Clasificamos los assets según el tipo de recurso (imagen, ícono, etc…), además es recomendble que sigamos un estándar para nombrar nuestros archivos (nombre corto, desciptivo, en minúsculas, sin espacios) .
+Finalmente la estructura de carpetas de nuestro proyecto debería quedar de esta forma:
+
+- assets
+	- icons
+	- img
+		bitcon.svg
+		logo.svg
+	index.html
+
+Para exportar, usar SVG siempre que una imagen sea rica en transparente y con pocos colores.
+
+-------------------------
+Scroll Horizontal
+-------------------------
+overflow-x
+
+La propiedad de CSS overflow-x establece lo que se muestra cuando el contenido desborda los bordes izquierdo y derecho de un elemento a nivel de bloque. Puede que no sea nada, una barra de desplazamiento o el contenido adicional. (usamos valor overflow-x: scroll;)
+
+overscroll-behavior
+
+la propiedad de css overscroll-behabior establece lo que hace un navegador cuando alcanza el límite de un área de desplazamiento. Es una abreviatura de overscroll-behavior-x y overscroll-behavior-y.
+Usamos overscroll-behavior-x: contain;
+
+scroll-snap-type
+La propiedad CSS scroll-snap-type establece qué tan estrictamente se aplican los puntos de snap en el contenedor de desplazamiento en caso de que haya uno. Agregamos esto con valor "x proximity" en el contenedor para que el scroll se centre siempre en uno de los elementos.
+
+scroll-snap-align: center; eso lo agregamos en los contenedores que representan a las tarjetas para poner los puntos de snap para el deslizador.
+
+flex --> gap
+El gap agrega un espacio entre contenedores. No es soportado por todos los navegadores
+
+caniuse.com --> Saber que estilos puedo usar en que navegadores.
+	- Los estilos que aplicamos deberian verse bien en todos los navegadores a excepcion de Internet Explorer.
